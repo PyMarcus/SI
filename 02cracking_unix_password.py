@@ -8,7 +8,7 @@ def hash_it(word: str, salt: str) -> str:
     return crypt.crypt(word, salt)
 
 
-def password():
+def password() -> str:
     global SALT, PATH
     with open(PATH, 'r') as shadow:
         for line in shadow.readlines():
